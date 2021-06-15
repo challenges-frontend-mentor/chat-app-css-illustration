@@ -1,0 +1,63 @@
+@use "../config/variables" as *;
+@use "../mixins/breakpoint" as *;
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+main{
+  // overflow: hidden;
+}
+
+
+body{
+  font-family: Rubik;
+  position: relative;
+  margin: 0;
+  background-color: red;
+
+
+  &::before{
+    content: "";
+    position: absolute;
+    background: $violet-gradient;
+    width: 100%;
+    height: 475px;
+    border-bottom-right-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    left: -50%;
+    z-index: -1;
+    top: 0;
+    
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    background: $violet-gradient;
+    width: 100%;
+    height: 475px;
+    border-bottom-right-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    left: 50%;
+    z-index: -1;
+    top: 0;
+    
+  }
+}
+
+.title{
+  text-align: center;
+  color: $Very-Dark-Desaturated-Violet;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.paragraph{
+  text-align: center;
+  line-height: 2;
+  margin: 0px 20px 0px 20px;
+  color: $Grayish-Blue;
+}

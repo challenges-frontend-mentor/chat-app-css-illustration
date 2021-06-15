@@ -1,0 +1,37 @@
+@use "../config/variables" as *;
+
+.user{
+  width: 250px;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  
+  
+  &__photo{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $White;
+    margin-left:5px;
+  }
+
+  &__info{
+    color: $White;
+    font-size: 0.5rem;
+    margin-left: 10px; 
+  }
+
+  &__name, &__status{
+    margin: 3px;
+    opacity: .8;
+  }
+
+}
+
+
+.fa-chevron-left,
+.fa-ellipsis-v{
+  color: white;
+  height: 10px;
+  font-size: 1rem;
+}

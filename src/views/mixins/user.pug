@@ -1,0 +1,6 @@
+mixin user(photo, name, status)
+  article.user
+    img(src= photo, alt= name).user__photo
+    .user__info
+      h2.user__name= name
+      p.user__status= status

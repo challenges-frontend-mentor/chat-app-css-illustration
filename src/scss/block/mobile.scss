@@ -1,0 +1,161 @@
+@use "../config/variables" as *;
+// @use "../mixins/breakpoint" as *;
+
+
+.mobile{
+  width: 250px;
+  // height: 475px;
+  background-color: $Light-Grayish-Violet;
+  
+  border: 10px solid $White;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 65px;
+  
+  overflow: hidden;
+  // margin: 50px auto 0;
+  // border-radius: 50px;
+  // padding: 20px;
+  position: relative;
+  box-shadow: 10px 10px 25px rgba(62, 39, 83, 0.1);
+
+  &::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 20px;
+    background-color: $White;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px 0px 15px 15px;
+    
+  }
+  
+  
+  &__header{
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 10px;
+    background: $violet-gradient-right;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+    
+  }
+ 
+
+  &__message-container{
+    font-size: 0.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: flex;
+    
+    &--start{
+      color: $Moderate-Violet;
+      
+    }
+    
+    &--end{
+      justify-content: flex-end;
+      color: $Desaturated-Dark-Violet;
+      --message-background: white;
+    
+      
+      
+    }
+  }
+  
+  
+  
+  &__message{
+    max-width: 55%;
+    margin: 0;
+    font-weight: 300;
+    background-color: var(--message-background, $Dark-Grayish-Violet);
+    border-radius: 8px;
+    padding:6px 9px 6px 6px;
+ 
+    &-images{
+      width: 19%;
+      border-radius: 10px;
+      box-shadow: 0 10px 5px rgba(62, 39, 83, 0.05);
+      
+      &:not(:last-child){
+        margin-right: 10px;
+        
+      }
+      
+      }
+      &-price{
+        margin:3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 5px;
+        color: #ffffff;
+
+  
+        &-money{
+          font-size: .8rem;
+          font-weight: 700;
+          margin: 0;
+          color: $White;
+        }
+      }
+
+    &--colorizer{
+      background-image: $violet-gradient-left;
+      color:#ffffff4f;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 75%;
+      width: 100%;
+      border-radius: 10px 10px 10px 5px;
+      padding-left: 8px;
+    }
+
+
+
+  }
+
+  &__input-container{
+    margin: 15px 10px 12px 10px;
+    // height: 150px;
+  }
+  
+  &__input-container form{
+    display: flex;
+    
+  }
+  
+  &__input{
+    border: none;
+    height: 33px;
+    background: $White;
+    width: 100%;
+    border-radius: 33px;
+    position: relative;
+    padding-left: 15px;
+
+    &::placeholder{
+      color: $Grayish-Blue;
+    }
+  }
+
+  &__submit{
+    border: 5px solid $White;
+    position: absolute;
+    right: 10px;
+    width: 33px;
+    height: 33px;
+    color: $White;
+    border-radius: 50%;
+    background: $Very-Dark-Desaturated-Violet;
+  }
+
+  
+}
+

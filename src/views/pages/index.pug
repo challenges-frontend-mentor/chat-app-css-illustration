@@ -1,0 +1,48 @@
+include ../mixins/user.pug
+include ../mixins/chat-messages
+include ../mixins/price
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./css/style.css")
+    link(rel="stylesheet", href="./css/fonts.css")
+    <script src="https://kit.fontawesome.com/c3cdf48903.js" crossorigin="anonymous"></script>
+    title chat app illustration
+  body
+    main
+      section.mobile
+        header.mobile__header
+          i.fas.fa-chevron-left.fa-xs
+          +user("./asset/images/avatar.jpg", "Samuel Green", "Available to Walk")
+          i.fas.fa-ellipsis-v.fa-xs
+        .mobile__message-content
+          +chat-message()
+            p.mobile__message That sounds great. I’d be happy with that.
+          +chat-message()
+            p.mobile__message Could you send over some pictures of your dog, please?
+          +chat-message("end")
+              img.mobile__message-images(src= "./asset/images/dog-image-1.jpg")
+              img.mobile__message-images(src= "./asset/images/dog-image-2.jpg")
+              img.mobile__message-images(src= "./asset/images/dog-image-3.jpg") 
+          +chat-message("end")
+            p.mobile__message Here are a few pictures. She’s a happy girl!
+          +chat-message("end")
+            p.mobile__message Can you make it?
+          +chat-message()
+            p.mobile__message She looks so happy! The time we discussed works. How long shall I take her out for?
+          +chat-message()
+            +price("30 minute walk","$29")
+          +chat-message()
+            +price("1 hour walk","$49")
+          .mobile__input-container
+            form
+              input(placeholder= "Type a messages...").mobile__input 
+              button(type="submit").mobile__submit
+                i.fas.fa-chevron-right
+
+      h1.title Simple booking
+      p.paragraph Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
+        
