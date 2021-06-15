@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css"><script src="https://kit.fontawesome.com/c3cdf48903.js" crossorigin="anonymous"></script>
+    <title>chat app illustration</title>
+  </head>
+  <body>
+    <main>
+      <section class="mobile">
+        <header class="mobile__header"><i class="fas fa-chevron-left fa-xs"></i>
+          <article class="user"><img class="user__photo" src="./asset/images/avatar.jpg" alt="Samuel Green"/>
+            <div class="user__info">
+              <h2 class="user__name">Samuel Green</h2>
+              <p class="user__status">Available to Walk</p>
+            </div>
+          </article><i class="fas fa-ellipsis-v fa-xs"></i>
+        </header>
+        <div class="mobile__message-content">
+          <div class="mobile__message-container mobile__message-container--start">
+            <p class="mobile__message">That sounds great. I’d be happy with that.</p>
+          </div>
+          <div class="mobile__message-container mobile__message-container--start">
+            <p class="mobile__message">Could you send over some pictures of your dog, please?</p>
+          </div>
+          <div class="mobile__message-container mobile__message-container--end"><img class="mobile__message-images" src="./asset/images/dog-image-1.jpg"><img class="mobile__message-images" src="./asset/images/dog-image-2.jpg"><img class="mobile__message-images" src="./asset/images/dog-image-3.jpg">
+          </div>
+          <div class="mobile__message-container mobile__message-container--end">
+            <p class="mobile__message">Here are a few pictures. She’s a happy girl!</p>
+          </div>
+          <div class="mobile__message-container mobile__message-container--end">
+            <p class="mobile__message">Can you make it?</p>
+          </div>
+          <div class="mobile__message-container mobile__message-container--start">
+            <p class="mobile__message">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+          </div>
+          <div class="mobile__message-container mobile__message-container--start">
+            <div class="mobile__message mobile__message--colorizer"> <i class="far fa-circle fa-lg"></i>
+              <p class="mobile__message-price">30 minute walk<span class="mobile__message-price-money">$29</span></p>
+            </div>
+          </div>
+          <div class="mobile__message-container mobile__message-container--start">
+            <div class="mobile__message mobile__message--colorizer"> <i class="far fa-circle fa-lg"></i>
+              <p class="mobile__message-price">1 hour walk<span class="mobile__message-price-money">$49</span></p>
+            </div>
+          </div>
+          <div class="mobile__input-container">
+            <form>
+              <input class="mobile__input" placeholder="Type a messages...">
+              <button class="mobile__submit" type="submit"><i class="fas fa-chevron-right"></i></button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <h1 class="title">Simple booking</h1>
+      <p class="paragraph">Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+    </main>
+  </body>
 </html>
