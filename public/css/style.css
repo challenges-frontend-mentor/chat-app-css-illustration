@@ -8,31 +8,61 @@ body {
   font-family: Rubik;
   position: relative;
   margin: 0;
-  background-color: red;
+  background-color: #f5f3f7;
+  min-height: 100vh;
 }
-body::before {
+body::before, body::after {
   content: "";
   position: absolute;
   background: linear-gradient(#e942ff, #8838ff);
   width: 100%;
-  height: 475px;
-  border-bottom-right-radius: 1000px;
-  border-bottom-left-radius: 1000px;
+  height: 75vh;
   left: -50%;
   z-index: -1;
+}
+@media screen and (min-width: 1400px) {
+  body::before, body::after {
+    width: 600px;
+  }
+}
+body::before {
   top: 0;
+  border-radius: 0 0 300px 300px;
+}
+@media screen and (min-width: 1400px) {
+  body::before {
+    left: -10%;
+  }
 }
 body::after {
-  content: "";
-  position: absolute;
-  background: linear-gradient(#e942ff, #8838ff);
-  width: 100%;
-  height: 475px;
-  border-bottom-right-radius: 1000px;
-  border-bottom-left-radius: 1000px;
+  border-radius: 300px 300px 0 0;
   left: 50%;
-  z-index: -1;
-  top: 0;
+  bottom: 0;
+  opacity: 0.02;
+}
+@media screen and (min-width: 1400px) {
+  body::after {
+    left: 70%;
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  body {
+    display: grid;
+    align-items: center;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+@media screen and (min-width: 1400px) {
+  main {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    align-items: center;
+  }
 }
 
 .title {
@@ -41,6 +71,11 @@ body::after {
   font-weight: 500;
   font-size: 2.5rem;
 }
+@media screen and (min-width: 1400px) {
+  .title {
+    text-align: left;
+  }
+}
 
 .paragraph {
   text-align: center;
@@ -48,9 +83,22 @@ body::after {
   margin: 0px 20px 0px 20px;
   color: #999999;
 }
+@media screen and (min-width: 1400px) {
+  .paragraph {
+    text-align: left;
+    margin-left: 0;
+    line-height: 1.8;
+  }
+}
 
+@media screen and (min-width: 1400px) {
+  .section {
+    width: 48%;
+  }
+}
 .mobile {
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
   background-color: #f5f3f7;
   border: 10px solid white;
   border-radius: 30px;
